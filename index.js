@@ -12,4 +12,7 @@ connectDB().then(()=>console.log("Database connected")).then(()=>{
     })
 })
 
+app.get("/",async(req,res)=>{
+    res.json({message:"User connected"})
+})
 app.use("/api/user",userRouter);
